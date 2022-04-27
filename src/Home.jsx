@@ -1,17 +1,37 @@
 import MainLayout from './components/layouts/MainLayout';
+import DocumentTitle from 'react-document-title';
 
 function Home() {
   return (
-  <MainLayout>
-      <div>
-          <div className='jumbotron pt-5'>
-              <h1 className="display-6">หน้าหลัก</h1>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fuga labore doloremque, totam non nesciunt asperiores veritatis dignissimos praesentium dolorum delectus iste expedita laboriosam aliquid autem enim culpa. At, aspernatur?
-          </p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam eum mollitia, amet nostrum optio obcaecati autem nesciunt consequatur illum sunt totam ad rem vitae repellat eligendi natus animi fugiat ex!</p>
+    <MainLayout>
+    <DocumentTitle title='Home' />
+    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={0} className="active" aria-current="true" aria-label="Slide 1" />
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={1} aria-label="Slide 2" />
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={2} aria-label="Slide 3" />
       </div>
-  </MainLayout>
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img src="assets/images/slide/food1.jpg" className="d-block w-100" alt="Slide 1" />
+        </div>
+        <div className="carousel-item">
+          <img src="assets/images/slide/food2.jpg" className="d-block w-100" alt="Slide 2" />
+        </div>
+        <div className="carousel-item">
+          <img src="assets/images/slide/food3.jpg" className="d-block w-100" alt="Slide 3" />
+        </div>
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true" />
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+</MainLayout>
   )
 }
 

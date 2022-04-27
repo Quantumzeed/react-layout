@@ -1,8 +1,10 @@
 import MainLayout from './components/layouts/MainLayout';
+import DocumentTitle from 'react-document-title';
 
 function Service() {
   return (
   <MainLayout>
+      <DocumentTitle title="บริการ" />
       <div>
           <div className='jumbotron pt-5'>
               <h1 className="display-6">บริการ</h1>
